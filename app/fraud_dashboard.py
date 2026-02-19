@@ -20,17 +20,17 @@ model = joblib.load(MODEL_PATH)
 scaler = joblib.load(SCALER_PATH)
 
 st.sidebar.header("Data input")
-upload = st.sidebar.file_uploader("Upload transactions CSV (creditcard.csv) or leave empty to use sample", type=["csv"])
-if upload:
-    df = pd.read_csv(upload)
+# Automatically load dataset from repo
+DATA_PATH = "data/creditcard.csv"
+
+if os.path.exists(DATA_PATH):
+    df = pd.read_csv(DATA_PATH)
 else:
-    st.sidebar.info("No file uploaded — using a small sample from the dataset (first 5000 rows).")
-    # load bundled sample if present in repo data/sample.csv else fail gracefully
-    sample_path = "data/sample_creditcard.csv"
-    if os.path.exists(sample_path):
-        df = pd.read_csv(sample_path)
+    st.warning("Local dataset not found. Please upload creditcard.csv.")
+    upload = st.sidebar.file_uploader("Upload creditcard.csv", type=["csv"])
+    if upload:
+        df = pd.read_csv(upload)
     else:
-        st.error("No sample data found. Upload 'creditcard.csv' from Kaggle in the sidebar.")
         st.stop()
 
 st.sidebar.markdown("---")
