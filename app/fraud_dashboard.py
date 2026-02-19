@@ -21,7 +21,7 @@ scaler = joblib.load(SCALER_PATH)
 
 st.sidebar.header("Data input")
 # Automatically load dataset from repo
-DATA_PATH = "data/creditcard.csv"
+DATA_PATH = "Dataset/creditcard.csv"
 
 if os.path.exists(DATA_PATH):
     df = pd.read_csv(DATA_PATH)
