@@ -1,7 +1,11 @@
+# Pin a Pillow wheel that installs cleanly on Streamlit Cloud
+Pillow==9.6.0
+
+# Streamlit and core libs
 streamlit==1.24.0
 pandas
 numpy
-scikit-learn
+scikit-learn==1.8.0
 imbalanced-learn
 joblib
 matplotlib
