@@ -1,11 +1,10 @@
-# Use a Streamlit version known to install cleanly in the Streamlit Cloud env you used earlier
+# Use the Streamlit release known to deploy reliably here
 streamlit==1.54.0
 
-# core data / ML libs
-pandas==2.3.3
-numpy==2.4.2
-scikit-learn==1.8.0
-imbalanced-learn==0.14.1
-joblib==1.5.3
-matplotlib==3.10.8
-seaborn==0.13.2
+# Core data/ML libs (let pip resolve compatible wheels)
+pandas
+scikit-learn
+imbalanced-learn
+joblib
+matplotlib
+seaborn
