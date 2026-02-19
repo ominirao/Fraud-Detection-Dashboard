@@ -2,7 +2,7 @@
 
 🔗 Live Demo: https://your-streamlit-link.streamlit.app  
 💻 GitHub Repository: https://github.com/your-username/fraud-detection-dashboard  
-📊 Dataset Source: 
+📊 Dataset Source: https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
 
 ---
 
@@ -65,12 +65,12 @@ Due to extreme class imbalance, performance was measured using:
 
 ## 📊 Model Performance
 
-| Metric        | Logistic Regression | Random Forest |
-|--------------|--------------------|---------------|
-| Precision    | XX%                | XX%           |
-| Recall       | XX%                | XX%           |
-| F1 Score     | XX%                | XX%           |
-| ROC-AUC      | X.XX               | X.XX          |
+| Metric       | Logistic Regression | Random Forest |
+|--------------|---------------------|---------------|
+| Precision    | 9.7%                | 70.5%         |
+| Recall       | 92.8%               | 85.7%         |
+| F1 Score     | 17.6%               | 77.4%         |
+| ROC-AUC      | 0.97                | 0.97          |
 
 > Focus was placed on Precision and Recall rather than Accuracy due to imbalance.
 
