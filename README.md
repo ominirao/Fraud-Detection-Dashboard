@@ -136,19 +136,19 @@ http://localhost:8501
 
 ## 📁 Project Structure
 
-fraud-detection-dashboard/
-│
-├── app/
-│ └── fraud_dashboard.py
-├── models/
-│ ├── fraud_model.joblib
-│ └── scaler.joblib
-├── notebooks/
-│ ├── 01_EDA.ipynb
-│ └── 02_model_training.ipynb
-├── data/
-│ └── README.md
-├── requirements.txt
+fraud-detection-dashboard/                                                    
+│                                                                               
+├── app/                                                                       
+│ └── fraud_dashboard.py                                                               
+├── models/                                                                     
+│ ├── fraud_model.joblib                                                                      
+│ └── scaler.joblib                                                               
+├── notebooks/                                                           
+│ ├── 01_EDA.ipynb                                                               
+│ └── 02_model_training.ipynb                                                                 
+├── data/                                                                           
+│ └── README.md                                                                         
+├── requirements.txt                                                        
 └── README.md
 
 ---
