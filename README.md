@@ -112,12 +112,12 @@ To access the live application:
 
 1️⃣ Clone the repository:
 
-git clone https://github.com/your-username/fraud-detection-dashboard.git
+git clone https://github.com/your-username/fraud-detection-dashboard.git                    
 cd fraud-detection-dashboard
 
 2️⃣ Create virtual environment:
 
-python3 -m venv venv
+python3 -m venv venv                             
 source venv/bin/activate
 
 3️⃣ Install dependencies:
