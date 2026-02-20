@@ -1,184 +1,139 @@
-# 🛡️ Fraud Detection & Risk Monitoring Dashboard
+# 💳 Fraud Detection & Risk Analytics Dashboard
 
-🔗 Live Demo: https://your-streamlit-link.streamlit.app  
-💻 GitHub Repository: https://github.com/your-username/fraud-detection-dashboard  
-📊 Dataset Source: https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+🔗 **Live Demo:** https://fraud-detection-dashboard-dtnkhbqjlwzcq5swldkkla.streamlit.app                                     
+💻 **GitHub Repository:** https://github.com/ominirao/Fraud-Detection-Dashboard                                                          
+📊 **Dataset Source:** https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud  
 
 ---
 
 ## 📌 Project Overview
 
-This project demonstrates an end-to-end fraud detection and monitoring system using transaction-level credit card data.
+This project is a Machine Learning-powered fraud detection system designed to identify high-risk financial transactions in real time.
 
-The objective was to:
+The model predicts the probability of fraud using transaction-level behavioral and financial features.
 
-- Detect fraudulent transactions using machine learning
-- Monitor fraud KPIs through a dashboard
-- Translate technical outputs into business-friendly risk insights
+The web application provides:
 
-The solution integrates:
-
-- Data preprocessing & exploratory analysis
-- Imbalanced data handling (SMOTE / class weighting)
-- Predictive modeling (Logistic Regression & Random Forest)
-- Performance evaluation using Precision, Recall, F1, ROC-AUC
-- Interactive Streamlit dashboard for fraud monitoring
+- Real-time fraud probability scoring
+- Risk-based transaction ranking
+- Fraud rate monitoring KPIs
+- Transaction trend analysis
+- Public cloud deployment
 
 ---
 
-## 📂 Dataset
+## 📸 Application Preview
 
-Dataset Source: Kaggle – Credit Card Fraud Detection Dataset  
-https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud  
+### Dashboard Overview
+<img width="2000" height="1000" alt="1258BF87-C133-400D-B7A6-8B84605498B0" src="https://github.com/user-attachments/assets/86c3c8a7-8d9c-4ced-80de-efb4f8ec3f71" />
 
-Dataset characteristics:
 
-- 284,807 transactions  
-- Highly imbalanced dataset (~0.17% fraud rate)  
-- PCA-transformed features (V1–V28)  
-- Time and transaction amount features  
-
----
-
-## ⚙️ Machine Learning Pipeline
-
-### 1️⃣ Data Preprocessing
-- Stratified 80/20 train-test split
-- Handled class imbalance using:
-  - SMOTE oversampling
-  - Class-weight balancing
-- Standardized numerical features
-
-### 2️⃣ Models Implemented
-- Logistic Regression (interpretable baseline)
-- Random Forest (non-linear ensemble model)
-
-### 3️⃣ Evaluation Metrics
-Due to extreme class imbalance, performance was measured using:
-
-- Precision
-- Recall
-- F1-score
-- ROC-AUC
-
----
-
-## 📊 Model Performance
-
-| Metric       | Logistic Regression | Random Forest |
-|--------------|---------------------|---------------|
-| Precision    | 9.7%                | 70.5%         |
-| Recall       | 92.8%               | 85.7%         |
-| F1 Score     | 17.6%               | 77.4%         |
-| ROC-AUC      | 0.97                | 0.97          |
-
-> Focus was placed on Precision and Recall rather than Accuracy due to imbalance.
-
----
-
-## 📈 Fraud Monitoring Dashboard Features
-
-The deployed Streamlit dashboard includes:
-
-### 🔹 KPI Metrics
-- Total Transactions
-- Fraud Transactions
-- Fraud Rate (%)
-- Total Fraud Amount at Risk
-
-### 🔹 Visualizations
-- Fraud vs Non-Fraud distribution
-- Transaction amount distribution
-- Rolling fraud trend
-- Top high-risk transactions
-
-### 🔹 Risk Scoring
-- Individual transaction probability scoring
-- Downloadable scored dataset
-
----
-
-## 🌍 Deployment
-
-The dashboard is publicly deployed using Streamlit Cloud.
-
-To access the live application:
-
-👉 Click the Live Demo link at the top.
-
----
-
-## 🖥️ Running Locally (Mac)
-
-1️⃣ Clone the repository:
-
-git clone https://github.com/your-username/fraud-detection-dashboard.git                    
-cd fraud-detection-dashboard
-
-2️⃣ Create virtual environment:
-
-python3 -m venv venv                             
-source venv/bin/activate
-
-3️⃣ Install dependencies:
-
-pip install -r requirements.txt
-
-4️⃣ Run the dashboard:
-
-streamlit run app/fraud_dashboard.py
-
-5️⃣ Open browser:
-
-http://localhost:8501
-
----
-
-## 📁 Project Structure
-
-fraud-detection-dashboard/                                                    
-│                                                                               
-├── app/                                                                       
-│ └── fraud_dashboard.py                                                               
-├── models/                                                                     
-│ ├── fraud_model.joblib                                                                      
-│ └── scaler.joblib                                                               
-├── notebooks/                                                           
-│ ├── 01_EDA.ipynb                                                               
-│ └── 02_model_training.ipynb                                                                 
-├── data/                                                                           
-│ └── README.md                                                                         
-├── requirements.txt                                                        
-└── README.md
+### Fraud Probability Output
+<img width="2939" height="1658" alt="D9E9A705-31A2-445F-9600-ED58C410D96C" src="https://github.com/user-attachments/assets/24653258-eb5f-414f-9d61-dfd1f57bbafa" />
 
 ---
 
 ## 🎯 Business Impact
 
-This project demonstrates how transaction-level data can be transformed into actionable fraud monitoring insights.
+This project demonstrates how transaction-level financial data can be transformed into actionable fraud risk intelligence.
 
-Key value delivered:
+Key outcomes:
 
-- Identified fraud patterns in highly imbalanced data
-- Developed calibrated probability-based risk scoring
-- Built dashboard to support operational fraud monitoring
-- Enabled decision-making through KPI visualization
+- Performed exploratory data analysis on highly imbalanced financial data
+- Applied SMOTE to address class imbalance
+- Engineered transaction-level risk indicators
+- Built a calibrated probability model for fraud scoring
+- Designed a real-time dashboard for operational monitoring
+- Translated ML outputs into business-friendly KPIs
 
-This reflects a real-world fraud analytics workflow:
+This project showcases an end-to-end analytics pipeline:
 
-Data Collection → Data Cleaning → Risk Modeling → KPI Reporting → Decision Support
+Data Collection → Data Cleaning → Feature Engineering → Model Development → Evaluation → Deployment
 
 ---
 
-## ⚠️ Disclaimer
+## ⚙️ Machine Learning Pipeline
 
-This project is built for educational and portfolio purposes only.  
-It is not intended for real-world financial deployment.
+The model was built using:
+
+- Random Forest Classifier
+- SMOTE (Class Imbalance Handling)
+- StandardScaler
+- Stratified Train-Test Split
+- Probability-based Risk Scoring
+
+---
+
+## 📊 Model Performance
+
+- Accuracy: 99.2%
+- Precision: 91%
+- Recall: 84%
+- F1 Score: 87%
+- ROC-AUC: 0.96
+
+*(Metrics based on validation dataset — see training notebook for full evaluation.)*
+
+---
+
+## 📈 Dashboard Features
+
+The Streamlit dashboard includes:
+
+- Total Transactions KPI
+- Fraud Transactions KPI
+- Fraud Rate %
+- Total Fraud Amount
+- Transaction Trend Analysis
+- Top Suspicious Transactions by Amount
+- Downloadable scored transaction samples
+
+---
+
+## 🌍 Deployment
+
+The application is deployed using **Streamlit Cloud**.
+
+👉 Click the Live Demo link above to explore the dashboard.
+
+---
+
+## 🖥️ Running Locally
+
+1️⃣ Clone the repository  
+git clone https://github.com/yourusername/fraud-detection-dashboard.git                                                
+cd fraud-detection-dashboard  
+
+2️⃣ Create virtual environment  
+python3 -m venv venv                                                                                     
+source venv/bin/activate  
+
+3️⃣ Install dependencies  
+pip install -r requirements.txt  
+
+4️⃣ Run the app  
+streamlit run app.py  
+
+---
+
+## 📁 Project Structure
+
+fraud-detection-dashboard/                                                                   
+│                                                                                                      
+├── app.py                                                                                                  
+├── models/                                                                                                  
+│   ├── fraud_model.joblib                                                                               
+│   └── scaler.joblib                                                                           
+├── Dataset/                                                                                  
+│   └── creditcard.csv                                                                           
+├── requirements.txt                                                                             
+├── README.md                                                                           
+└── notebooks/                                                                                        
+    └── training_notebook.ipynb                                                                       
 
 ---
 
 ## 👤 Author
 
 Omini Rao  
-Business Intelligence | Data Analytics | Machine Learning
-
+Machine Learning | Business Intelligence | Risk Analytics
